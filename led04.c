@@ -16,6 +16,12 @@ int main()
   pinMode(LEDRED, OUTPUT);
   pinMode(LEDGRE, OUTPUT);
   pinMode(LEDYEL, OUTPUT);
+
+  //reset LED. all LED off
+  digitalWrite(LEDRED, LOW);
+  digitalWrite(LEDGRE, LOW);
+  digitalWrite(LEDYEL, LOW);
+  
   while(1)
     {
       digitalWrite(LEDRED, HIGH);
@@ -25,11 +31,12 @@ int main()
 
       delay(3000);
 
+      printf("The signal changes soon...\n");
       for(int i = 0; i < 5; i++){
 	digitalWrite(LEDYEL, HIGH);
-	delay(500);
+	delay(250);
 	digitalWrite(LEDYEL, LOW);
-	delay(500);
+	delay(250);
       }
 
       digitalWrite(LEDRED, LOW);
@@ -39,11 +46,12 @@ int main()
       
       delay(3000);
 
+      printf("The signal changes soon...\n");
       for(int i = 0; i < 5; i++){
 	digitalWrite(LEDYEL, HIGH);
-	delay(500);
+	delay(250);
 	digitalWrite(LEDYEL, LOW);
-	delay(500);
+	delay(250);
       }      
     }
 
