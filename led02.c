@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<wiringPi.h>
 
-#define LEDRED 0
+#define LEDRED 3
 #define LEDGRE 2
-#define LEDYEL 3
+#define LEDYEL 0
 
 int main()
 {
