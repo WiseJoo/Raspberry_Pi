@@ -7,9 +7,6 @@
 
 int main()
 {
-  int selector[3] = {0,2,3};
-  int switcher = 0;
-  
   if(wiringPiSetup() == -1)
     {
       printf("setup wiringPi failed!");
