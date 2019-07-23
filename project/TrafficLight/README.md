@@ -1,4 +1,4 @@
-#Simulate Traffic Light project
+# Simulate Traffic Light project
 
 ### WiseJoo(Hyoun Jin)
 
