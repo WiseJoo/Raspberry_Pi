@@ -1,7 +1,8 @@
-#Simulate Traffic Light project
+# Simulate Traffic Light project
 
 ### WiseJoo(Hyoun Jin)
-
+# history
+2019.7.23 First md file upload
 
 _ _ _
 ## 1.概要(がいよう), 개요, OUTLINE
