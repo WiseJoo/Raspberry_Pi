@@ -5,7 +5,7 @@
 
 _ _ _
 ## 1.概要(がいよう), 개요, OUTLINE
-[image]
+<img src="https://user-images.githubusercontent.com/52649645/61677008-e697e980-ad38-11e9-940a-425b0bbb1d9d.PNG" width="90%"></img>
 
 
   車道側の信号が1つ、歩行者の方の信号が1つある環境  
@@ -25,11 +25,11 @@ _ _ _
 A change in the traffic light on the road does not change the signal on the pedestrian road at the same time.
 
 ## 3.アルゴリズム, 알고리즘, ALGORITHM
-[image]
+<img src="https://user-images.githubusercontent.com/52649645/61677026-fadbe680-ad38-11e9-8a24-533a6937899f.jpg" width="90%"></img>
 
 ## 4.駆動回路, 구동회로, Circuit
-### [Image]
-[image]
+### [Image]  
+<img src="https://user-images.githubusercontent.com/52649645/61677049-0c24f300-ad39-11e9-8b84-178c88d2f856.jpg" width="90%"></img>
 
-### [Video]
-[youtube or link]
+### [Video]  
+[![TrafficLight](https://img.youtube.com/vi/oAh6xgdB5yw/0.jpg)](https://youtu.be/oAh6xgdB5yw?t=0s)
