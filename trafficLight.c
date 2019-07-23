@@ -11,11 +11,11 @@
 #define PRED 5
 
 //define traffic light delay value
-#define D7 7000
+#define D14 14000
+#define D8 8000
 #define D4 4000
 #define D2 2000
 #define D1 1000
-#define D_5 500
 
 //traffic light test value
 #define TEST 10000
@@ -59,30 +59,30 @@ From now on above traffic lights represented like this ===> |OFF|OFF|OFF|||OFF|O
         digitalWrite(CAR_RED, LOW);
         digitalWrite(CAR_GRE, HIGH);
         digitalWrite(PRED, HIGH);
-        delay(D7);
+        delay(D14);
 
         //2nd sequence.
         //|CAR_GRE|OFF|CAR_YEL|||OFF|OFF|PRED
         digitalWrite(CAR_YEL, HIGH);
-        delay(D2);
+        delay(D4);
 
         //3rd sequence.
         //|OFF|CAR_RED|OFF|||OFF|OFF|PRED
         digitalWrite(CAR_GRE, LOW);
         digitalWrite(CAR_YEL, LOW);
         digitalWrite(CAR_RED, HIGH);
-        delay(D1);
+        delay(D2);
 
         //4th sequence.
         //|OFF|CAR_RED|OFF|||PMAIN_GRE|PSUB_GRE|OFF|
         digitalWrite(PRED, LOW);
         digitalWrite(PMAIN_GRE, HIGH);
         digitalWrite(PSUB_GRE, HIGH);
-        delay(D4);
+        delay(D8);
         for(int i = 0; i < 4; i++){
-            delay(D_5);
+            delay(D1);
             digitalWrite(PSUB_GRE, LOW);
-            delay(D_5);
+            delay(D1);
             digitalWrite(PSUB_GRE, HIGH);
         }
 
@@ -91,13 +91,13 @@ From now on above traffic lights represented like this ===> |OFF|OFF|OFF|||OFF|O
         digitalWrite(PMAIN_GRE, LOW);
         digitalWrite(PSUB_GRE, LOW);
         digitalWrite(PRED, HIGH);
-        delay(D1);
+        delay(D2);
 
 
         //6th sequence.
         //|OFF|CAR_RED|CAR_YEL|||OFF|OFF|PRED|
         digitalWrite(CAR_YEL, HIGH);
-        delay(D1);
+        delay(D4);
     }
 
   return 0;
