@@ -1,0 +1,31 @@
+#include <wiringPi.h>
+#include <stdio.h>
+
+#define INFRARED 11
+#define BUZZER 0
+#define LED 1
+#define SURVO 
+
+int main(){
+
+  if(wiringPiSetup() == -1){ return -1; }
+
+  pinMode(INFRARED, INPUT);
+  pinMode(BUZZER, OUTPUT);
+  pinMode(LED, OUTPUT);
+  pinMode(SURVO, OUTPUT);
+
+  for(;;){
+    if (digitalRead(INFRARED) == HIGH){
+      digitalWrite(BUZZER, HIGH);
+      digitalWrite(LED, HIGH);
+      printf("sense!\n");
+    }else {
+      digitalWrite(BUZZER, LOW);
+      digitalWrite(LED, LOW);
+      printf("nothing!\n");
+    }
+  }
+
+  return 0;
+}
