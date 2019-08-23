@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<wiringPi.h>
+#include<softPwm.h>
+
+// wPi.4
+#define FAN_IA 4
+
+// weak wind
+static void Weak(){
+  softPwmWrite(FAN_IA, 666);
+  printf("Weak wind\n");
+  delay(5000);
+}
+
+// medium wind
+static void Medium(){
+  softPwmWrite(FAN_IA, 333);
+  printf("Medium wind\n");
+  delay(5000);
+}
+
+// string wind
+static void Strong(){
+  softPwmWrite(FAN_IA, 0);
+  printf("Strong wind\n");
+  delay(5000);
+}
+
+int main()
+{
+  if(wiringPiSetup()) { return -1; }
+
+  softPwmCreate(FAN_IA, 0, 1000);
+
+  while(1){
+    Weak();        // weak wind 5sec
+    Medium();      // medium wind 5sec
+    Strong();      // strong wind 5sec
+  }
+
+  return 0;
+}
+
